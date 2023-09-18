@@ -1,0 +1,54 @@
+{
+    "name": "vendordevms/fedex-shipping",
+    "description": "Fedex Integration for Laravel",
+    "keywords": [
+        "vendordevms",
+        "fedex-shipping"
+    ],
+    "homepage": "https://github.com/vendordevms/fedex-shipping",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mahesh Sain",
+            "email": "vendordevms@aofenggsys.om",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.34",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vendordevms\\FedexShipping\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vendordevms\\FedexShipping\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vendordevms\\FedexShipping\\FedexShippingServiceProvider"
+            ],
+            "aliases": {
+                "FedexShipping": "Vendordevms\\FedexShipping\\FedexShippingFacade"
+            }
+        }
+    }
+}
