@@ -3,7 +3,7 @@
 namespace Vendordevms\FedexShipping;
 
 use Illuminate\Support\ServiceProvider;
-
+use Vendordevms\FedexShipping\Console\InstallFedexShipping;
 class FedexShippingServiceProvider extends ServiceProvider
 {
     /**
@@ -16,7 +16,7 @@ class FedexShippingServiceProvider extends ServiceProvider
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'fedex-shipping');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'fedex-shipping');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
@@ -40,7 +40,9 @@ class FedexShippingServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                InstallFedexShipping::class,
+            ]);
         }
     }
 
