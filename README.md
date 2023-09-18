@@ -1,4 +1,4 @@
-# Very short description of the package
+# Fedex Integration for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vendordevms/fedex-shipping.svg?style=flat-square)](https://packagist.org/packages/vendordevms/fedex-shipping)
 [![Total Downloads](https://img.shields.io/packagist/dt/vendordevms/fedex-shipping.svg?style=flat-square)](https://packagist.org/packages/vendordevms/fedex-shipping)
